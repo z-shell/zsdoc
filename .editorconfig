@@ -1,0 +1,59 @@
+# # Space or Tabs?
+# https://stackoverflow.com/questions/35649847/objective-reasons-for-using-spaces-instead-of-tabs-for-indentation
+# https://stackoverflow.com/questions/12093748/how-to-use-tabs-instead-of-spaces-in-a-shell-script
+#
+# Note: VIM users should use alternate marks [[[ and ]]] as the original ones can confuse nested substitutions,
+# e.g.: ${${${VAR}}}
+#
+# ---------------------------------------------------------------------------------------------------------------------
+# -*- mode: zsh; sh-indentation: 2; indent-tabs-mode: nil; sh-basic-offset: 2; -*-
+# vim: ft=zsh sw=2 ts=2 et
+# ---------------------------------------------------------------------------------------------------------------------
+root = true
+
+[*]
+charset = utf-8
+end_of_line = lf
+insert_final_newline = true
+trim_trailing_whitespace = true
+
+[**.{md,rst}]
+trim_trailing_whitespace = false
+
+[*.{sh,bash,zsh,fish}]
+indent_style = space
+indent_size = 2
+tab_width = 2
+
+[Makefile]
+indent_style = tab
+indent_size = 4
+
+[*.{xml,json}]
+indent_style = space
+indent_size = 2
+
+[*.{css,less}]
+indent_style = space
+indent_size = 2
+
+[*.{js,jsx,html,sass}]
+indent_style = tab
+indent_size = 4
+
+[*.{py,rb}]
+indent_style = space
+indent_size = 4
+
+[*.{go,java,scala,groovy,kotlin}]
+indent_style = tab
+indent_size = 4
+
+[*.{yml,yaml}]
+indent_style = space
+indent_size = 2
+tab_width = 2
+
+[CHANGELOG.md]
+indent_style = tab
+indent_size = 4
