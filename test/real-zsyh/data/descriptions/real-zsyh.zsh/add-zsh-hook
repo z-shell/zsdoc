@@ -1,0 +1,10 @@
+# Add to HOOK the given FUNCTION.
+# HOOK is one of chpwd, precmd, preexec, periodic, zshaddhistory,
+# zshexit, zsh_directory_name (the _functions subscript is not required).
+#
+# With -d, remove the function from the hook instead; delete the hook
+# variable if it is empty.
+#
+# -D behaves like -d, but pattern characters are active in the
+# function name, so any matching function will be deleted from the hook.
+#
