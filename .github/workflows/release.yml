@@ -1,0 +1,32 @@
+name: Release zsdoc
+
+on:
+  push:
+    tags:
+      - "v*.*.*"
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Setup
+        run: |
+          sudo apt update && sudo apt-get install zsh -yq
+      - name: Prepare
+        run: make
+      - name: Build realease
+        run: echo ${{ github.sha }} > release.txt
+      - name: Check
+        run: cat release.txt
+      - name: Release
+        uses: softprops/action-gh-release@v1
+        if: startsWith(github.ref, 'refs/tags/')
+        with:
+          files: |
+            build/zsd
+            build/zsd-detect
+            build/zsd-transform
+            build/zsd-to-adoc
+            release.txt
+            LICENSE
