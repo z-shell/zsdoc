@@ -1,9 +1,9 @@
-<h2 align="center">
+<h1 align="center">
   <a href="https://github.com/z-shell/zi">
-    <img src="https://github.com/z-shell/zi/raw/main/docs/images/logo.svg" alt="Logo" width="80" height="80">
+    <img src="https://github.com/z-shell/zi/raw/main/docs/images/logo.png" alt="Zi Logo" width="60px" height="60px" />
   </a>
-❮ ZI ❯ | Doxygen For Shell Scripts
-</h2>
+  ❮ Zi Doxygen For Shell Scripts ❯
+</h1>
 
 - [Introduction](#introduction)
 - [Installation](#installation)
@@ -12,8 +12,6 @@
 - [Few Rules](#few-rules)
 
 ## Introduction
-
-**Doxygen For Shell Scripts**
 
 Parses `Zsh` and `Bash` scripts, outputs `Asciidoc` document with:
 
