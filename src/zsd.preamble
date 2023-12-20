@@ -51,7 +51,6 @@ if [ -z "${ZSH_VERSION}" ]; then
   exec /usr/bin/env "${zsh_control_bin}" -f -c "source ${args}"
 fi
 
-local -A colors fg bg fg_bold bg_bold
 autoload colors
 colors
 
