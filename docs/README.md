@@ -97,10 +97,15 @@ Options:
 Example `--cignore` options:
 
 ```sh
---cignore '\#*FUNCTION:*{{{*'                 - ignore comments like: # FUNCTION: usage {{{
---cignore '(\#*FUNCTION:*{{{*|\#*FUN:*{{{*)'  - also ignore comments like: # FUN: usage {{{
-
-The file is parsed for synopsis block, which can be e.g.:
+# Ignore comments like: # FUNCTION: usage {{{
+--cignore  '\#[[:blank:]]FUNCTION:[[:blank:]]*[[:blank:]]{{{*'
+```
+```sh
+# Ignore comments like: # FUN: usage {{{
+--cignore '(\#[[:blank:]]FUN(C|CTION|):[[:blank:]]*[[:blank:]]{{{*|[[:blank:]]#\#[[:blank:]]#}}}*)'
+```
+```sh
+File is parsed for synopsis block, which can be e.g.:
 # synopsis {{{my synopsis, can be multi-line}}}
 ```
 
